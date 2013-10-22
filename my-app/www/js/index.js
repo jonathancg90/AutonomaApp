@@ -23,8 +23,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        app.appEvent();
-        app.showAlert('Mensaje de prueba','Mensaje informativo');
+//        app.showAlert('Mensaje de prueba','Mensaje informativo');
 
     },
     showAlert: function (message, title) {
@@ -33,9 +32,6 @@ var app = {
         } else {
             alert(title ? (title + ": " + message) : message);
         }
-    },
-
-    appEvent: function(){
-
     }
+
 };

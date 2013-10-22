@@ -1,12 +1,3 @@
-//$(window).load(function() {
-//    $(document).bind('deviceready', function () {
-//        $('#logIn').on('click',function(e){
-//            e.preventDefault();
-//            alert('entro');
-//        });
-//    });
-//});
-
 $(window).load(function() {
     $(document).bind('deviceready', function () {
          var domain = 'http://redau.herokuapp.com/';
@@ -26,18 +17,11 @@ $(window).load(function() {
                 data: data,
                 url: url,
                 success: function(data){
-                    debugger;
                     if(data.status==false){
-                        $('.message').append(data.message);
+                        app.showAlert('Usuario no registrado','Login');
                     }
                     else{
-                        alert('Usuario logeado');
-//                        $('.message').append(data.message);
-//                        $('#token').val(data.token);
-//                        $('.Information').show();
-//                        evtProfile();
-//                        evtSaberCursoDelDia();
-//                        evtCriterios();
+                        window.location.replace("inicio.html");
                     }
                 }
             });

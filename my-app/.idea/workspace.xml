@@ -5,9 +5,11 @@
     <ignored path="my-app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382436587991" ignored="false" />
-    <file path="/index.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382437032435" ignored="false" />
+    <file path="/index.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382450548802" ignored="false" />
     <file path="/config.xml" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382433459583" ignored="false" />
-    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382437315040" ignored="false" />
+    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382451879495" ignored="false" />
+    <file path="/index.css" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382450329075" ignored="false" />
+    <file path="/inicio.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382452530073" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +32,42 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="1298" selection-end="1298" vertical-scroll-proportion="-18.75">
+            <state line="26" column="8" selection-start="1096" selection-end="1159" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.6675939">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="22" column="25" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inicio.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/inicio.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="56" selection-start="8501" selection-end="8501" vertical-scroll-proportion="0.5938417">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logo.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/logo.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-5.806452">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,7 +75,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+            <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,9 +102,14 @@
       <list>
         <option value="$PROJECT_DIR$/www/js/jquery.js" />
         <option value="$PROJECT_DIR$/www/config.xml" />
-        <option value="$PROJECT_DIR$/www/js/index.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/js/main.js" />
+        <option value="$PROJECT_DIR$/www/js/aaa.js" />
+        <option value="$PROJECT_DIR$/www/css/aaa.css" />
+        <option value="$PROJECT_DIR$/www/css/mmm.css" />
+        <option value="$PROJECT_DIR$/www/inicio.html" />
       </list>
     </option>
   </component>
@@ -183,6 +213,24 @@
               <option name="myItemId" value="my-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -233,6 +281,13 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -360,26 +415,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+    <entry file="file://$PROJECT_DIR$/www/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+        <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-5.806452">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="1298" selection-end="1298" vertical-scroll-proportion="-18.75">
+        <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.6675939">
+        <state line="22" column="25" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="1096" selection-end="1159" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/jquery.mobile-1.3.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11214" column="4" selection-start="359110" selection-end="359110" vertical-scroll-proportion="0.9759207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/jquery.mobile-1.3.2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3369" column="1" selection-start="136346" selection-end="136346" vertical-scroll-proportion="0.9759207">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#94923#95010#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/inicio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="56" selection-start="8501" selection-end="8501" vertical-scroll-proportion="0.5938417">
+          <folding />
         </state>
       </provider>
     </entry>
