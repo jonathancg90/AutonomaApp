@@ -2,6 +2,8 @@ $(window).load(function() {
     $(document).bind('deviceready', function () {
         var domain = 'http://redau.herokuapp.com/';
 
+        localStorage.myname = 'HOLA';
+        app.showAlert(localStorage.myname ,'Login');
         var login = $('#logIn');
 
         login.on('click',function(e){
