@@ -5,7 +5,7 @@
     <ignored path="my-app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382436587991" ignored="false" />
-    <file path="/index.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382450548802" ignored="false" />
+    <file path="/index.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382453350447" ignored="false" />
     <file path="/config.xml" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382433459583" ignored="false" />
     <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382451879495" ignored="false" />
     <file path="/index.css" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1382450329075" ignored="false" />
@@ -29,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="8" selection-start="1096" selection-end="1159" vertical-scroll-proportion="-16.25">
+            <state line="25" column="63" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.5498534">
               <folding />
             </state>
           </provider>
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inicio.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="inicio.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/inicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="56" selection-start="8501" selection-end="8501" vertical-scroll-proportion="0.5938417">
+            <state line="9" column="8" selection-start="548" selection-end="624" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -66,7 +66,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-5.806452">
+            <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-20.32258">
               <folding />
             </state>
           </provider>
@@ -103,13 +103,13 @@
         <option value="$PROJECT_DIR$/www/js/jquery.js" />
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/js/main.js" />
         <option value="$PROJECT_DIR$/www/js/aaa.js" />
         <option value="$PROJECT_DIR$/www/css/aaa.css" />
         <option value="$PROJECT_DIR$/www/css/mmm.css" />
         <option value="$PROJECT_DIR$/www/inicio.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -420,30 +420,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-5.806452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="25" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="1096" selection-end="1159" vertical-scroll-proportion="-16.25">
           <folding />
         </state>
       </provider>
@@ -464,9 +443,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="18" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-20.32258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/inicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="56" selection-start="8501" selection-end="8501" vertical-scroll-proportion="0.5938417">
+        <state line="9" column="8" selection-start="548" selection-end="624" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="63" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.5498534">
           <folding />
         </state>
       </provider>
