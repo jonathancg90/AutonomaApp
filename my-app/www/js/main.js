@@ -1,7 +1,7 @@
 $(window).load(function() {
     $(document).bind('deviceready', function () {
          var domain = 'http://redau.herokuapp.com/';
-        alert(localStorage.myname);
+        app.showAlert(sessionStorage.getItem("token") ,'Token');
         //hola
         evtProfile();
 

@@ -2,8 +2,7 @@ $(window).load(function() {
     $(document).bind('deviceready', function () {
         var domain = 'http://redau.herokuapp.com/';
 
-        localStorage.myname = 'HOLA';
-        app.showAlert(localStorage.myname ,'Login');
+//        app.showAlert(localStorage.myname ,'Login');
         var login = $('#logIn');
 
         login.on('click',function(e){
@@ -27,7 +26,7 @@ $(window).load(function() {
                         app.showAlert('Usuario no registrado','Login');
                     }
                     else{
-                        localStorage.myname = data.token;
+                        sessionStorage.setItem("token", data.token);
 //                        $('#token').val(data.token);
                         window.location.replace("inicio.html");
                     }
