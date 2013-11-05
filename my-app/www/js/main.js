@@ -1,12 +1,8 @@
 $(window).load(function() {
     $(document).bind('deviceready', function () {
          var domain = 'http://redau.herokuapp.com/';
-        //window.localStorage.getItem("token");
         app.showAlert('prueba' ,'Token');
         $('#storage').html('prueba: '+window.localStorage.getItem("token"));
-        //app.showAlert(window.localStorage.getItem("token") ,'Token');
-        //app.showAlert(sessionStorage.getItem("token") ,'Token');
-        //hola
         evtProfile();
 
         //Elementos disparadoresd e evento
