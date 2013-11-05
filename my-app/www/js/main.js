@@ -1,6 +1,7 @@
 $(window).load(function() {
     $(document).bind('deviceready', function () {
-         var domain = 'http://redau.herokuapp.com/';
+        debugger;
+        var domain = 'http://redau.herokuapp.com/';
         app.showAlert('prueba' ,'Token');
         $('#storage').html('prueba: '+window.localStorage.getItem("token"));
         evtProfile();
@@ -182,6 +183,26 @@ $(window).load(function() {
                 }
             });
         }
+
+//        var myDataRef = new Firebase('https://writeandshare.firebaseio.com');
+//        $('#messageInput').keypress(function (e) {
+//            if (e.keyCode == 13) {
+//                var name = $('#nameInput').val();
+//                var text = $('#messageInput').val();
+//                myDataRef.push({name: name, text: text});
+//                $('#messageInput').val('');
+//            }
+//        });
+//        myDataRef.on('child_added', function(snapshot) {
+//            var message = snapshot.val();
+//            displayChatMessage(message.name, message.text);
+//        });
+//        function displayChatMessage(name, text) {
+//            $('.comment:last-child').clone().appendTo('#list_comment');
+//            var clone = $('.comment:last-child');
+//            clone.find('.name_user').text(name);
+//            clone.find('.body_comment').text(text);
+//        }
 
     });
 });
