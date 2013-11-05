@@ -26,7 +26,8 @@ $(window).load(function() {
                         app.showAlert('Usuario no registrado','Login');
                     }
                     else{
-                        sessionStorage.setItem("token", data.token);
+                        window.localStorage.setItem("token", data.token);
+                        //sessionStorage.setItem("token", data.token);
 //                        $('#token').val(data.token);
                         window.location.replace("inicio.html");
                     }
