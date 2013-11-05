@@ -79,6 +79,7 @@
                         </select>
                     </div>
                     <input type="submit" value='Guardar2222'>
+                    <input type="submit" value='Probar' id="Probar">
                 </form>
             </article>
             <div id="storage">
@@ -161,3 +162,11 @@
         </section>
     </body>
 </html>
+
+<script>
+    $('#Probar').on('click', function(e) {
+       e.preventDefault();
+       alert('hola:' + window.localStorage.getItem("token"));
+    });
+
+</script>
