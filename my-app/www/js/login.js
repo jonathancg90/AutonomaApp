@@ -3,7 +3,6 @@ $(window).load(function() {
         var domain = 'http://redau.herokuapp.com/';
 
 //        app.showAlert(localStorage.myname ,'Login');
-        debugger;
         $('#storage').html('prueba: '+window.localStorage.getItem("token"));
         var login = $('#logIn');
 
