@@ -1,16 +1,20 @@
 $(window).load(function() {
-init();
-//    $(document).bind('deviceready', function () {
-//    });
+    init();
 });
-
-
 
 function init(){
     var domain = 'http://redau.herokuapp.com/';
-    app.showAlert('prueba' ,'Token');
-    $('#storage').html('prueba: '+window.localStorage.getItem("token"));
-    evtProfile();
+    var token = window.localStorage.getItem("token");
+    if(token != null) {
+        evtCarreras();
+        evtTurnos();
+        evtProfile();
+        evtSaberCursoDelDia();
+        evtCriterios();
+    } else {
+        alert('Ha ocurrido un error:deslogearse y vuelva a entrar')
+    }
+
 
     //Elementos disparadoresd e evento
     var carreras = $('#Carreras'),
@@ -18,15 +22,12 @@ function init(){
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
 
-
+    debugger;
     //Elementos contenedores
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
-        contentCarreras = $('#select_carreras'),
-        contentTurno = $('#turnos'),
         contentactualizar = $('.content-Cursos'),
-        contentSaber = $('.content-Saber'),
-        contentCalificar = $('#form_calificar');
+        contentSaber = $('.info');
 
     //Eventos
 
@@ -42,6 +43,7 @@ function init(){
     actualizar.on('submit',function(e){
         e.preventDefault();
         evtActualizarProfile();
+        evtSaberCursoDelDia();
     });
 
     calificar.on('submit',function(e){
@@ -50,32 +52,35 @@ function init(){
     });
 
     function evtProfile(){
-        var id = $('#token').val();
-        if(id != ''){
-            var data = {
-                token:id
-            };
-            var url =  domain +'perfil';
-            $.ajax({
-                dataType: "json",
-                type: "POST",
-                data:data,
-                url: url,
+        var data = {
+            token:token
+        };
+        var url =  domain +'perfil';
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            data:data,
+            url: url,
 
-                success: function(data){
-                    $('act-name').val(data.username);
-                    contentProfile.children('ul').html('');
-                    contentProfile.children('ul').append('<li>Carrera: ID:'+data.carrera.id+' | Nombre: '+data.carrera.nombre+'</li>');
-                    contentProfile.children('ul').append('<li>Ciclo: '+data.ciclo+'</li>');
-                    contentProfile.children('ul').append('<li>Turno: ID:'+data.turno.id+' | Nombre: '+data.turno.nombre+'</li>');
-                    contentProfile.children('ul').append('<li>'+data.username+'</li>');
-                    contentProfile.children('ul').append('<li>Seccion '+data.seccion+'</li>');
-                    //$.mobile.changePage("otherPage.html");
-                }
-            });
-        } else{
-            contentProfile.children('ul').html('Usuario no valido');
-        }
+            success: function(data){
+                //Agregar por defecto la carrera
+                $.each($('#carrera'), function(i, value){
+
+                });
+                //Agregar por defecto ciclo
+                $.each($('#select_ciclo'), function(i, value){
+
+                });
+                //agregar por defecto turno
+                $.each($('.input_check_turno'), function(i, value){
+
+                });
+                //Agregar por defecto seccion
+                $.each($('.input_check_turno'), function(i, value){
+
+                });
+            }
+        });
     }
     function evtTurnos(){
         var url =  domain +'turno';
@@ -84,10 +89,11 @@ function init(){
             type: "GET",
             url: url,
             success: function(data){
-                contentTurno.html('');
+                var contentTurno = $('#turnos');
                 $.each(data, function(id, value){
                     contentTurno.append('<label>'+value.nombre+'</label><input type="radio" class="input_check_turno" name="radio-choice-b" id="'+value.id+'">');
                 });
+                contentTurno.trigger('create');
             }
         });
     }
@@ -98,10 +104,13 @@ function init(){
             type: "GET",
             url: url,
             success: function(data){
+                var contentCalificar = $('#form_calificar');
                 contentCalificar.html('');
-                $.each(data, function(id, value){
-                    contentCalificar.append('<label>'+value.nombre+'</label><input data-id="'+value.id+'" type="range" class="slide" min="0" max="100" value="50"/>');
+                $.each(data, function(id, value) {
+                    contentCalificar.append('<label for="slider-1">'+value.nombre+'</label><input data-criterio="'+value.id+'" type="range" name="slider-1" id="slider-1" class="slide" value="50" min="0" max="100" data-highlight="true">');
                 });
+                contentCalificar.append('<input type="submit" value="Actualizar">');
+                contentCalificar.trigger('create');
             }
         });
     }
@@ -112,16 +121,15 @@ function init(){
             type: "GET",
             url: url,
             success: function(data){
-                contentCarreras.html('');
+                var contentCarreras = $('#carrera');
                 $.each(data, function(id, value){
                     contentCarreras.append('<option value='+value.id+'>'+value.nombre+'</option>');
                 });
-                //$.mobile.changePage("otherPage.html");
+                //contentCarreras.trigger('create');
             }
         });
     }
     function evtActualizarProfile(){
-        var token = $('#token').val();
         var data = {
                 'carrera':$("#select_carreras").val(),
                 'turno':$("#input_check_turno:checked").val(),
@@ -140,30 +148,28 @@ function init(){
             }
         });
     }
-    // function evtSaberCursoDelDia(){
-    //     var token = $('#token').val();
-    //     var data = {
-    //             'token':token
-    //         };
-    //     var url =  domain +'curso';
-    //     $.ajax({
-    //         dataType: "json",
-    //         type: "POST",
-    //         url: url,
-    //         data:data,
-    //         success: function(data){
-    //             var id_curso = data.id,
-    //                 profesor = data.profesor,
-    //                 curso = data.curso;
-    //             contentSaber.children('ul').html('');
-    //             contentSaber.children('ul').append('<li>Profesor: ID:'+profesor+' | Curso: '+curso+'</li>');
-    //             $('#idCurso').val(id_curso);
-    //         }
-    //     });
-    // }
+    function evtSaberCursoDelDia(){
+         var data = {
+                 'token':token
+             };
+         var url =  domain +'curso';
+         $.ajax({
+             dataType: "json",
+             type: "POST",
+             url: url,
+             data:data,
+             success: function(data){
+                 var id_curso = data.id,
+                     profesor = data.profesor,
+                     curso = data.curso;
+                 contentSaber.children('ul').html('');
+                 contentSaber.children('ul').append('<li>Profesor: ID:'+profesor+' | Curso: '+curso+'</li>');
+                 $('#idCurso').val(id_curso);
+             }
+         });
+    }
     function evtCalificar(){
-        var token = $('#token').val(),
-            curso = $('#idCurso').val();
+        var curso = $('#idCurso').val();
 
         var inputs = $('#form_calificar input[type=range]'),
             calificaciones = [];

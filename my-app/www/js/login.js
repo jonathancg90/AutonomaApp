@@ -2,9 +2,12 @@ $(window).load(function() {
     $(document).bind('deviceready', function () {
         var domain = 'http://redau.herokuapp.com/';
 
-//        app.showAlert(localStorage.myname ,'Login');
-        $('#storage').html('prueba: '+window.localStorage.getItem("token"));
         var login = $('#logIn');
+
+        var token = window.localStorage.getItem("token");
+        if(token != null) {
+            evtLoginToken();
+        }
 
         login.on('click',function(e){
             e.preventDefault();
@@ -28,8 +31,25 @@ $(window).load(function() {
                     }
                     else{
                         window.localStorage.setItem("token", data.token);
-                        //sessionStorage.setItem("token", data.token);
-//                        $('#token').val(data.token);
+                        window.location.replace("inicio.html");
+                    }
+                }
+            });
+
+        }
+        function evtLoginToken(){
+            var data = {
+                'token':token
+            };
+            var url =  domain +'login-token';
+            $.ajax({
+                dataType: "json",
+                type: "POST",
+                data: data,
+                url: url,
+                success: function(data){
+                    if(data.status!=false){
+                        window.localStorage.setItem("token", data.token);
                         window.location.replace("inicio.html");
                     }
                 }

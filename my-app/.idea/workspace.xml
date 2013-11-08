@@ -5,9 +5,9 @@
     <ignored path="my-app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383624337808" ignored="false" />
-    <file path="/inicio.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383625395242" ignored="false" />
+    <file path="/inicio.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383713702558" ignored="false" />
     <file path="/login.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383624848482" ignored="false" />
-    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383707556461" ignored="false" />
+    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383712915342" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="7" selection-start="35" selection-end="35" vertical-scroll-proportion="0.02124646">
+            <state line="25" column="31" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -39,43 +39,7 @@
       <file leaf-file-name="inicio.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/inicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="27" selection-start="8328" selection-end="8328" vertical-scroll-proportion="-6.3333335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="52" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-20.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="6" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
+            <state line="114" column="32" selection-start="6264" selection-end="6268" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,17 +65,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/login.js" />
         <option value="$PROJECT_DIR$/www/inicio.html" />
         <option value="$PROJECT_DIR$/www/js/main.js" />
-        <option value="$PROJECT_DIR$/www/js/login.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1537" />
-    <option name="height" value="905" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1535" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -262,8 +226,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1535" height="876" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -348,39 +312,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="34" column="5" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="378" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/jquery_1.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9788" column="13" selection-start="273198" selection-end="273198" vertical-scroll-proportion="207.96034">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="9788" column="13" selection-start="273198" selection-end="273198" vertical-scroll-proportion="207.96034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/img/logo.png">
@@ -390,9 +342,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/jquery.mobile-1.3.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11214" column="4" selection-start="359110" selection-end="359110" vertical-scroll-proportion="0.9759207">
-          <folding />
-        </state>
+        <state line="11214" column="4" selection-start="359110" selection-end="359110" vertical-scroll-proportion="0.9759207" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
@@ -407,49 +357,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.02086231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/inicio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="27" selection-start="8328" selection-end="8328" vertical-scroll-proportion="-6.3333335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="52" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-20.625">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.02086231" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
+        <state line="27" column="73" selection-start="900" selection-end="900" vertical-scroll-proportion="-13.064516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="18" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.5718475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="45" selection-start="874" selection-end="874" vertical-scroll-proportion="0.5006954" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="16" selection-end="16" vertical-scroll-proportion="0.02086231" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/inicio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="32" selection-start="6264" selection-end="6268" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="35" selection-end="35" vertical-scroll-proportion="0.02124646">
+        <state line="25" column="31" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

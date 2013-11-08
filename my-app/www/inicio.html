@@ -22,7 +22,7 @@
     </head>
     <body>
 
- <section data-role='page' id='page_update_profile' data-theme='b'>
+    <section data-role='page' id='page_profile' data-theme='b'>
             <header data-role='header' data-position='fixed' data-id='main_header'>
                <div data-role="navbar" data-iconpos="bottom">
                     <ul>
@@ -78,61 +78,44 @@
                             <option value="on">B</option>
                         </select>
                     </div>
-                    <input type="submit" value='Guardar2222'>
-                    <input type="submit" value='Probar' id="Probar">
+                    <input type="submit" value='Guardar'>
                 </form>
             </article>
-            <div id="storage">
-
-            </div>
-        </section>
-        <section data-role='page' id='page_profile' data-theme='b'>
-            <header data-role='header' data-position='fixed' data-id='main_header'>
-                <ul class="ui-grid-b header_nav">
-                    <li class="ui-block-a active_menu"><a href='#page_profile' data-transition='slide'>Perfil</a></li>
-                    <li class="ui-block-b"><a href='#page_filter' data-transition='slide'>Filtro</a></li>
-                    <li class="ui-block-c"><a href='#page_muro' data-transition='slide'>Muro</a></li>
-                </ul>
-            </header>
-            <a href="#page_update_profile"></a>
-            <input type="hidden" class='token'>
-            <input type="hidden" id="idCurso">
-            <article data-role='content' class='content-Profile'></article>
         </section>
         <section data-role='page' id='page_filter' data-theme='b'>
             <header data-role='header' data-position='fixed' data-id='main_header'>
-                <ul class="ui-grid-b header_nav">
-                    <li class="ui-block-a"><a href='#page_profile' data-transition='slide'>Perfil</a></li>
-                    <li class="ui-block-b active_menu"><a href='#page_filter' data-transition='slide'>Filtro</a></li>
-                    <li class="ui-block-c"><a href='#page_muro' data-transition='slide'>Muro</a></li>
-                </ul>
+               <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#page_profile" data-icon="home">MI perfil</a></li>
+                        <li><a href="#page_filter" data-icon="star">Calificalo</a></li>
+                        <li><a href="#page_muro" data-icon="grid">Muro</a></li>
+                    </ul>
+                </div><!-- /navbar -->
             </header>
             <article data-role='content'>
                 <form action="" id='form_calificar'>
-                    <label for="slider-1">Me fascina:</label>
-                    <input type="range" name="slider-1" id="slider-1" class='slide' value="50" min="0" max="100" data-highlight="true">
-                    <label for="slider-2">Me gusta:</label>
-                    <input type="range" name="slider-2" id="slider-2" class='slide' value="50" min="0" max="100" data-highlight="true">
-                    <label for="slider-3">Me da sueño:</label>
-                    <input type="range" name="slider-3" id="slider-3" class='slide' value="50" min="0" max="100" data-highlight="true">
-                    <label for="slider-4">Me aburre:</label>
-                    <input type="range" name="slider-4" id="slider-4" class='slide' value="50" min="0" max="100" data-highlight="true">
-                    <input type="submit" value='Actualizar'>
                 </form>
             </article>
         </section>
         <section data-role='page' id='page_muro' data-theme='b'>
             <header data-role='header' data-position='fixed' data-id='main_header'>
-                <ul class="ui-grid-b header_nav">
-                    <li class="ui-block-a"><a href='#page_profile' data-transition='slide'>Perfil</a></li>
-                    <li class="ui-block-b"><a href='#page_filter' data-transition='slide'>Filtro</a></li>
-                    <li class="ui-block-c active_menu"><a href='#page_muro' data-transition='slide'>Muro</a></li>
-                </ul>
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#page_profile" data-icon="home">MI perfil</a></li>
+                        <li><a href="#page_filter" data-icon="star">Calificalo</a></li>
+                        <li><a href="#page_muro" data-icon="grid">Muro</a></li>
+                    </ul>
+                </div><!-- /navbar -->
             </header>
             <article data-role='content'>
                 <figure>
                     <img src="http://lorempixel.com/200/400/animals" alt="">
                 </figure>
+                <div id="info-curso">
+                    <ul id="info">
+
+                    </ul>
+                </div>
                 <div class="progress-bar">
                   <input type="range" id="progress-bar" value="0" min="0" max="100"
                   data-highlight="true" data-mini="true" />
@@ -148,6 +131,7 @@
                                 <h1 class='name_user'>titulo1</h1>
                             </hgroup>
                         </header>
+
                         <p class='body_comment'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, odio, asperiores est magnam similique tenetur nam molestias eaque odit eligendi doloribus vero nesciunt porro saepe dolores exercitationem laborum. Enim, alias.</p>
                         <nav class='options'>
                             <ul>
@@ -163,10 +147,3 @@
     </body>
 </html>
 
-<script>
-    $('#Probar').on('click', function(e) {
-       e.preventDefault();
-       alert('hola:' + window.localStorage.getItem("token"));
-    });
-
-</script>
