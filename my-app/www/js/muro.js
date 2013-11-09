@@ -17,15 +17,19 @@ $(function(){
 	var init = function(){
         //Ingreso por nickname
 		$("#send-message").on('click', function(e){
+            e.preventDefault();
+            var message = $(this).val()
+            debugger;
+            socket.emit('message', 'jonathan', message);
 
-            var sendMessage =  function(message){
-                socket.emit('message', message);
-            }
-        
-            var addMessage =  function(nickname, message){
-                $('#list-messages').append($("<li>@"+ nickname +": "+ message +"</li>"));
-            }
 		});
+        //Actualiza mensajes que escriben
+		socket.on('message', function(nickname, message){
+			addMessage(nickname, message);
+		});
+        var addMessage =  function(nickname, message){
+            $('#list-messages').append($("<li>@"+ nickname +": "+ message +"</li>"));
+        }
 	}
 
 });

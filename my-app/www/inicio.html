@@ -63,7 +63,7 @@
                     </div>
                     <div data-role="fieldcontain">
                         <a href="" id='Turnos'></a>
-                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id='turnos'>
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id='Turnos'>
                             <legend>Turno:</legend>
                             <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
                             <label for="radio-choice-c">Mañana</label>
@@ -123,8 +123,10 @@
                   data-highlight="true" data-mini="true" />
                 </div>
                 <div data-role='fieldcontain'>
-                    <textarea cols="40" rows="8" name="textarea" id='messageInput' placeholder='Tipea Aqui'></textarea>
-                    <input type="submit" value='Guardar' id="send-message">
+                    <form action="" id='formMsg'>
+                        <textarea cols="40" rows="8" name="textarea" id='messageInput' placeholder='Tipea Aqui'></textarea>
+                        <input type="submit" value='Guardar' id="send-message">
+                    </form>
                 </div>
                 <section id='list_comment'>
                      <article class='comment'>
@@ -133,8 +135,12 @@
                                 <h1 class='name_user'>titulo1</h1>
                             </hgroup>
                         </header>
+                         <div>
+                             <ul id="list-messages">
 
-                        <p class='body_comment'></p>
+                             </ul>
+
+                         </div>
                         <nav class='options'>
                             <ul>
                                 <li><a href="#">Like</a></li>
