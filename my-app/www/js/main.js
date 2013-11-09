@@ -29,9 +29,9 @@ function init(){
         contentSaber = $('.info');
 
     //Eventos
-    $('#a').on('click', function(e){
-        e.preventDefault();
-    });
+//    $('#a').on('click', function(e){
+//        e.preventDefault();
+//    });
     turno.on('click',function(e){
         e.preventDefault();
         evtTurnos();
@@ -62,7 +62,6 @@ function init(){
             type: "POST",
             data:data,
             url: url,
-
             success: function(data){
                 $('#act-name').val(data.nombre);
                 //Agregar por defecto la carrera
@@ -173,7 +172,7 @@ function init(){
     function evtSaberCursoDelDia(){
          var data = {
                  'token':token
-             };
+         };
          var url =  domain +'curso';
          $.ajax({
              dataType: "json",
