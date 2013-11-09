@@ -15,12 +15,14 @@ function init(){
         alert('Ha ocurrido un error:deslogearse y vuelva a entrar')
     }
 
+
     //Elementos disparadoresd e evento
     var carreras = $('#Carreras'),
         turno = $('#Turnos'),
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
 
+    debugger;
     //Elementos contenedores
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
@@ -82,17 +84,25 @@ function init(){
     }
     function evtTurnos(){
         var url =  domain +'turno';
+        var html ='';
+        var turnos = $('#turnos');
         $.ajax({
             dataType: "json",
             type: "GET",
             url: url,
             success: function(data){
-                var contentTurno = $('#turnos');
-                $.each(data, function(id, value){
-                    contentTurno.append('<label>'+value.nombre+'</label><input type="radio" class="input_check_turno" name="radio-choice-b" id="'+value.id+'">');
-                });
-                contentTurno.trigger('create');
-            }
+                var a = [
+                    {'id':3, 'nombre':'Mañana'},
+                    {'id':4, 'nombre':'Tarde'},
+                    {'id':5, 'nombre':'Noche'}
+                ];
+                for(var i in data){
+                    debugger;
+                    html += '<input type="radio" name="radio-choice-b" class="input_check_turno" id="'+a[i].id+'" value="list" checked="checked"><label for="'+a[i].id+'">'+a[i].nombre+'</label>';
+                }
+                turnos.append(html);
+                turnos.trigger('create');
+            } 
         });
     }
     function evtCriterios(){

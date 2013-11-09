@@ -13,7 +13,6 @@ function iniciar(){
         e.preventDefault();
         sendMessage();
     });
-    debugger;
     var websocket = io.connect('http://localhost:3001/socket.io/socket.io.js');
     var socket = io.connect('http://localhost:3001/socket.io/socket.io.js');
     socket.on('connect', function () {
@@ -35,7 +34,6 @@ function load(data){
 }
 //Enviar el mensaje
 function sendMessage(){
-    debugger;
     var msg = $("#msg").val();
     //Verificamos que no tenga scripts
     if((msg.indexOf("<") != -1)){
@@ -56,6 +54,5 @@ function sendMessage(){
     }   
 }
 function procesarMensaje(data){
-    debugger;
     $('#list_comment').append($('<p>').append($('<article>').html('<span>'+ data + "</span> ")));
 }
