@@ -104,3 +104,22 @@ h1 {
     background: rgb(231, 241, 240);
     min-height: 6em;
 }
+figure > img {
+    width: 100%;
+    min-height: 100%;
+}
+.ui-field-contain.ui-body.ui-br {
+    text-align: center;
+}
+#turnos {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    display: inline-table;
+}
+#turnos .ui-radio {
+    float: none;
+    display: inline-block;
+    width: 30%;
+}
+.ui-btn { font-size: 48px !important; }

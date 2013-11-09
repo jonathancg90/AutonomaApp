@@ -17,7 +17,7 @@ function init(){
 
 
     //Elementos disparadoresd e evento
-    var carreras = $('#Carreras'),
+    var carreras = $('#carrera'),
         turno = $('#Turnos'),
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
@@ -29,7 +29,9 @@ function init(){
         contentSaber = $('.info');
 
     //Eventos
-
+    $('#a').on('click', function(e){
+        e.preventDefault();
+    });
     turno.on('click',function(e){
         e.preventDefault();
         evtTurnos();
@@ -83,7 +85,7 @@ function init(){
     }
     function evtTurnos(){
         var url =  domain +'turno';
-        var html ='';
+        var html ='<legend>Turnos:</legend>';
         var turnos = $('#turnos');
         $.ajax({
             dataType: "json",
@@ -124,16 +126,19 @@ function init(){
     }
     function evtCarreras(){
         var url =  domain +'carrera';
+        $('#carrera').html('');
+        var html ='';
         $.ajax({
             dataType: "json",
             type: "GET",
             url: url,
             success: function(data){
                 var contentCarreras = $('#carrera');
-                $.each(data, function(id, value){
-                    contentCarreras.append('<option value='+value.id+'>'+value.nombre+'</option>');
-                });
-                //contentCarreras.trigger('create');
+                for(var i in data){
+                    html += '<option value='+data[i].id+'>'+data[i].nombre+'</option>';
+                }
+                contentCarreras.append(html);
+                contentCarreras.trigger('create');
             }
         });
     }
