@@ -15,14 +15,12 @@ function init(){
         alert('Ha ocurrido un error:deslogearse y vuelva a entrar')
     }
 
-
     //Elementos disparadoresd e evento
     var carreras = $('#Carreras'),
         turno = $('#Turnos'),
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
 
-    debugger;
     //Elementos contenedores
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
