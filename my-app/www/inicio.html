@@ -15,6 +15,8 @@
         <script type="text/javascript" src="js/jquery_1.1.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/socket.io.js"></script>
+        <script type="text/javascript" src="js/muro.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
@@ -61,7 +63,18 @@
                     </div>
                     <div data-role="fieldcontain">
                         <a href="" id='Turnos'></a>
+<<<<<<< HEAD
                         <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id='turnos'>
+=======
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id='Turnos'>
+                            <legend>Turno:</legend>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+                            <label for="radio-choice-c">Mañana</label>
+                            <input type="radio" name="radio-choice-b" class='input_check_turno' id="radio-choice-d" value="grid">
+                            <label for="radio-choice-d">Tarde</label>
+                            <input type="radio" name="radio-choice-b" class='input_check_turno' id="radio-choice-e" value="gallery">
+                            <label for="radio-choice-e">Noche</label>
+>>>>>>> 890ce8bfe3b46bee5993439d2abab93e9100e486
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -115,12 +128,31 @@
                 </div>
                 <div data-role='fieldcontain'>
                     <form action="" id='formMsg'>
-                        <input type='text' id='msg' placeholder='Name'>
-                        <input type="submit" value='send!' id='sendMessage'>
+                        <textarea cols="40" rows="8" name="textarea" id='messageInput' placeholder='Tipea Aqui'></textarea>
+                        <input type="submit" value='Guardar' id="send-message">
                     </form>
                 </div>
                 <section id='list_comment'>
-                    
+                     <article class='comment'>
+                        <header class='head_comment'>
+                            <hgroup>
+                                <h1 class='name_user'>titulo1</h1>
+                            </hgroup>
+                        </header>
+                         <div>
+                             <ul id="list-messages">
+
+                             </ul>
+
+                         </div>
+                        <nav class='options'>
+                            <ul>
+                                <li><a href="#">Like</a></li>
+                                <li><a href="#">Comentar</a></li>
+                                <li><a href="#">Comentar</a></li>
+                            </ul>
+                        </nav>
+                    </article>
                 </section>
             </article>
         </section>
