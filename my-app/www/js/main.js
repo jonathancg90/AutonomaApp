@@ -62,6 +62,7 @@ function init(){
             url: url,
 
             success: function(data){
+                $('#act-name').val(data.nombre);
                 //Agregar por defecto la carrera
                 $.each($('#carrera'), function(i, value){
 
@@ -139,22 +140,30 @@ function init(){
     }
     function evtActualizarProfile(){
         var data = {
+                'nombre':$('#act-name').val(),
                 'carrera':$("#select_carreras").val(),
                 'turno':$("#input_check_turno:checked").val(),
                 'ciclo':$('#select_ciclo').val(),
                 'token':token
             };
-        var url =  domain +'actualizar';
-        $.ajax({
-            dataType: "json",
-            type: "POST",
-            url: url,
-            data:data,
-            success: function(data){
-                alert('actualizado');
-                console.log(data.status);
-            }
-        });
+        if(data.carrera != '' && data.turno != '' && data.ciclo != '') {
+            var url =  domain +'actualizar';
+            $.ajax({
+                dataType: "json",
+                type: "POST",
+                url: url,
+                data:data,
+                success: function(data){
+                    if(data.status == false){
+                        alert('No se pudo actualizar tus datos');
+                    } else {
+                        alert('Datos actualizados')
+                    }
+                }
+            });
+        } else {
+           alert('datos incompletos')
+        }
     }
     function evtSaberCursoDelDia(){
          var data = {
