@@ -15,6 +15,8 @@
         <script type="text/javascript" src="js/jquery_1.1.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/socket.io.js"></script>
+        <script type="text/javascript" src="js/muro.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
@@ -121,8 +123,8 @@
                   data-highlight="true" data-mini="true" />
                 </div>
                 <div data-role='fieldcontain'>
-                     <input type='text' id='nameInput' placeholder='Name'>
                     <textarea cols="40" rows="8" name="textarea" id='messageInput' placeholder='Tipea Aqui'></textarea>
+                    <input type="submit" value='Guardar' id="send-message">
                 </div>
                 <section id='list_comment'>
                      <article class='comment'>
@@ -132,7 +134,7 @@
                             </hgroup>
                         </header>
 
-                        <p class='body_comment'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, odio, asperiores est magnam similique tenetur nam molestias eaque odit eligendi doloribus vero nesciunt porro saepe dolores exercitationem laborum. Enim, alias.</p>
+                        <p class='body_comment'></p>
                         <nav class='options'>
                             <ul>
                                 <li><a href="#">Like</a></li>
