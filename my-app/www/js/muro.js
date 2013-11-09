@@ -6,20 +6,17 @@ $(function(){
 		$wait = $('#wait');
 
 	$chat.hide();
-	var socket = io.connect('http://127.0.0.1:8081/');
+	var socket = io.connect('http://mighty-castle-2609.herokuapp.com/');
 	socket.on('connect', function(){
 		console.log('conected with socket!!');
 		init();
 	});
 
-
-
 	var init = function(){
         //Ingreso por nickname
 		$("#send-message").on('click', function(e){
             e.preventDefault();
-            var message = $(this).val()
-            debugger;
+            var message = $(this).val();
             socket.emit('message', 'jonathan', message);
 
 		});
