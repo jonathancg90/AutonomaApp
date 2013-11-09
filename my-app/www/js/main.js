@@ -85,7 +85,7 @@ function init(){
         });
     }
     function evtTurnos(){
-        var url =  domain +'turno';
+        var url =  dƒomain +'turno';
         var html ='<legend>Turnos:</legend>';
         var turnos = $('#turnos');
         $.ajax({
