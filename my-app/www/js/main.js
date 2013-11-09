@@ -97,7 +97,6 @@ function init(){
                     {'id':5, 'nombre':'Noche'}
                 ];
                 for(var i in data){
-                    debugger;
                     html += '<input type="radio" name="radio-choice-b" class="input_check_turno" id="'+a[i].id+'" value="list" checked="checked"><label for="'+a[i].id+'">'+a[i].nombre+'</label>';
                 }
                 turnos.append(html);
@@ -107,17 +106,19 @@ function init(){
     }
     function evtCriterios(){
         var url =  domain +'criterios';
+        var html ='';
+        var contentCalificar = $('#form_calificar');
         $.ajax({
             dataType: "json",
             type: "GET",
             url: url,
             success: function(data){
-                var contentCalificar = $('#form_calificar');
-                contentCalificar.html('');
-                $.each(data, function(id, value) {
-                    contentCalificar.append('<label for="slider-1">'+value.nombre+'</label><input data-criterio="'+value.id+'" type="range" name="slider-1" id="slider-1" class="slide" value="50" min="0" max="100" data-highlight="true">');
-                });
-                contentCalificar.append('<input type="submit" value="Actualizar">');
+                for(var i in data){
+                    debugger;
+                    html += '<label for="slider-'+data[i].id+'">'+data[i].nombre+'</label><input data-criterio="'+data[i].id+'" type="range" name="slider-1" id="slider-'+data[i].id+'" class="slide" value="50" min="0" max="100" data-highlight="true">'
+                }
+                html+='<input type="submit" value="Actualizar">';
+                contentCalificar.append(html);
                 contentCalificar.trigger('create');
             }
         });
