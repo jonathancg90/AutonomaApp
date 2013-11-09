@@ -22,7 +22,6 @@ function init(){
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
 
-    debugger;
     //Elementos contenedores
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
@@ -97,7 +96,6 @@ function init(){
                     {'id':5, 'nombre':'Noche'}
                 ];
                 for(var i in data){
-                    debugger;
                     html += '<input type="radio" name="radio-choice-b" class="input_check_turno" id="'+a[i].id+'" value="list" checked="checked"><label for="'+a[i].id+'">'+a[i].nombre+'</label>';
                 }
                 turnos.append(html);
