@@ -22,7 +22,6 @@ function init(){
         actualizar = $('#form_actualizar'),
         calificar = $('#form_calificar');
 
-    debugger;
     //Elementos contenedores
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
