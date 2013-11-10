@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/www/js/main.js" line="98" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="387384d4-1c11-4940-a4f5-cab30bdc4518" name="Default" comment="" />
     <ignored path="my-app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383624337808" ignored="false" />
-    <file path="/inicio.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384073138533" ignored="false" />
+    <file path="/inicio.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384074336681" ignored="false" />
     <file path="/login.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1383624848482" ignored="false" />
-    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384073267075" ignored="false" />
+    <file path="/main.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384080758857" ignored="false" />
     <file path="/Dummy.txt" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384063184103" ignored="false" />
     <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/HelloNodeServer/web.js" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384053472303" ignored="false" />
     <file path="/a.dummy" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384054742123" ignored="false" />
-    <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/redAutonoma/views/phonegap.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384072150484" ignored="false" />
-    <file path="/phonegap.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384072145295" ignored="false" />
-    <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/redAutonoma/resolve.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384066985015" ignored="false" />
-    <file path="/resolve.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384066965543" ignored="false" />
+    <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/redAutonoma/views/phonegap.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384081203775" ignored="false" />
+    <file path="/phonegap.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384080829023" ignored="false" />
+    <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/redAutonoma/resolve.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384080872397" ignored="false" />
+    <file path="/resolve.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384080869327" ignored="false" />
+    <file path="/media/1c4bca60-721b-451e-ae17-7239d51e86d8/virtualenv/heroku/desarrollo/redAutonoma/bd.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384074870761" ignored="false" />
+    <file path="/bd.py" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384074870761" ignored="false" />
+    <file path="/index.html" changelist="387384d4-1c11-4940-a4f5-cab30bdc4518" time="1384075376074" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,16 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="26" selection-start="8085" selection-end="8085" vertical-scroll-proportion="0.64444447">
+            <state line="250" column="46" selection-start="9163" selection-end="9163" vertical-scroll-proportion="0.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="20" selection-start="1314" selection-end="1314" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
@@ -49,16 +58,7 @@
       <file leaf-file-name="inicio.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/inicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="83" selection-start="4152" selection-end="4152" vertical-scroll-proportion="-7.490909">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="13" selection-start="3069" selection-end="3069" vertical-scroll-proportion="-11.064516">
+            <state line="72" column="71" selection-start="3474" selection-end="3474" vertical-scroll-proportion="-8.563637">
               <folding />
             </state>
           </provider>
@@ -84,9 +84,9 @@
         <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/js/login.js" />
         <option value="$PROJECT_DIR$/www/js/muro.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/inicio.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/inicio.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/main.js" />
       </list>
     </option>
@@ -412,13 +412,6 @@
         <state line="1" column="6" selection-start="16" selection-end="16" vertical-scroll-proportion="0.02086231" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="46" selection-start="950" selection-end="950" vertical-scroll-proportion="0.4608295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/muro.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="26" selection-start="592" selection-end="592" vertical-scroll-proportion="0.45784885">
@@ -426,23 +419,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/inicio.html">
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="83" selection-start="4152" selection-end="4152" vertical-scroll-proportion="-7.490909">
+        <state line="107" column="13" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.4985465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="13" selection-start="3069" selection-end="3069" vertical-scroll-proportion="-11.064516">
+        <state line="26" column="20" selection-start="1314" selection-end="1314" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/inicio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="71" selection-start="3474" selection-end="3474" vertical-scroll-proportion="-8.563637">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="26" selection-start="8085" selection-end="8085" vertical-scroll-proportion="0.64444447">
+        <state line="250" column="46" selection-start="9163" selection-end="9163" vertical-scroll-proportion="0.6">
           <folding />
         </state>
       </provider>

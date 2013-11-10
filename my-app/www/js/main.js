@@ -3,10 +3,17 @@ $(window).load(function() {
 });
 
 function init(){
+    //Variables globales
+    //------------------
+
     //var domain = 'http://redau.herokuapp.com/';
     var domain = 'http://127.0.0.1:5000/';
-
     var token = window.localStorage.getItem("token");
+    var idCurso = '';
+
+    //Login Automatico
+    //------------------
+
     if(token != null) {
         evtProfile();
         evtSaberCursoDelDia();
@@ -15,7 +22,9 @@ function init(){
     }
 
 
-    //Elementos disparadoresd e evento
+    //Elementos disparadores de evento
+    //--------------------------------
+
     var carreras = $('#carrera'),
         turno = $('#Turnos'),
         actualizar = $('#form_actualizar'),
@@ -28,29 +37,20 @@ function init(){
         contentSaber = $('#info-curso');
 
     //Eventos
-//    $('#a').on('click', function(e){
-//        e.preventDefault();
-//    });
-    turno.on('click',function(e){
-        e.preventDefault();
-        evtTurnos();
-    });
-
-    carreras.on('click',function(e){
-        e.preventDefault();
-        evtCarreras();
-    });
+    //-------
     actualizar.on('click',function(e){
         e.preventDefault();
         evtActualizarProfile();
         evtSaberCursoDelDia();
     });
 
-    calificar.on('submit',function(e){
+    $('#calificar-curso').on('click',function(e){
         e.preventDefault();
         evtCalificar();
     });
 
+    //Funciones
+    //-------
     function evtProfile(){
         var data = {
             token:token
@@ -207,19 +207,17 @@ function init(){
              success: function(data){
                  if(data.state == 'OK'){
                      if(curso = data.curso != undefined){
-                         var id_curso = data.id,
-                         profesor = data.profesor,
+                         var profesor = data.profesor,
                          curso = data.curso;
-                         result = 'Profesor: ID:'+profesor+' | Curso: '+curso;
+                         idCurso = data.id;
+                         result = 'Profesor:'+profesor+' | Curso: '+curso;
                          contentSaber.children('ul').html('');
                          contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
-                         $('#idCurso').val(id_curso);
                      } else {
                          result = 'No tiene cursos el dia de hoy';
                          contentSaber.children('ul').html('');
                          contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
                      }
-                 debugger;
                  evtCriterios();
                  } else {
                     result = 'Ah ocurrido un problema';
@@ -233,7 +231,8 @@ function init(){
         var titulo = $('#titulo-curso').html();
         var url =  domain +'criterios';
         var html ='<h2>'+titulo+'</h2><br>';
-        var contentCalificar = $('#form_calificar');
+        var contentCalificar = calificar;
+        contentCalificar.html('');
         $.ajax({
             dataType: "json",
             type: "GET",
@@ -242,58 +241,44 @@ function init(){
                 for(var i in data){
                    html += '<label for="slider-'+data[i].id+'">'+data[i].nombre+'</label><input type="number" data-type="range" data-criterio="'+data[i].id+'" name="slider-'+data[i].id+'" id="slider-0" value="50" min="0" max="100">'
                 }
-                html+='<input type="submit" value="Actualizar">';
                 contentCalificar.append(html);
                 contentCalificar.trigger('create');
             }
         });
     }
     function evtCalificar(){
-        var curso = $('#idCurso').val();
-
-        var inputs = $('#form_calificar input[type=number]'),
+        if(idCurso != ''){
+            var inputs = $('#form_calificar input[type=number]'),
             calificaciones = [];
-        $.each(inputs, function(key, value){
-            calificaciones.push({
-                'id':$(value).data('id'),
-                'valor':$(value).val()
+            $.each(inputs, function(key, value){
+                calificaciones.push({
+                    'id':$(value).data('criterio'),
+                    'valor':$(value).val()
+                });
             });
-        });
-        var data = {
-                'token':token,
-                'curso':curso,
-                'califica':JSON.stringify(calificaciones)
-            };
-        var url =  domain +'califica';
-        $.ajax({
-            dataType: "json",
-            type: "POST",
-            url: url,
-            data:data,
-            success: function(data){
-                debugger;
-            }
-        });
-    }
+            var data = {
+                    'token':token,
+                    'curso':idCurso,
+                    'califica':JSON.stringify(calificaciones)
+                };
+            var url =  domain +'califica';
 
-//      var myDataRef = new Firebase('https://writeandshare.firebaseio.com');
-//      $('#messageInput').keypress(function (e) {
-//          if (e.keyCode == 13) {
-//              var name = $('#nameInput').val();
-//              var text = $('#messageInput').val();
-//              myDataRef.push({name: name, text: text});
-//              $('#messageInput').val('');
-//          }
-//      });
-//      myDataRef.on('child_added', function(snapshot) {
-//          var message = snapshot.val();
-//          displayChatMessage(message.name, message.text);
-//      });
-//      function displayChatMessage(name, text) {
-//          $('.comment:last-child').clone().appendTo('#list_comment');
-//          var clone = $('.comment:last-child');
-//          clone.find('.name_user').text(name);
-//          clone.find('.body_comment').text(text);
-//      }
+            $.ajax({
+                dataType: "json",
+                type: "POST",
+                url: url,
+                data:data,
+                success: function(data){
+                    if(data.status=='OK'){
+                        alert('El curso ha sido calificado:'+data.puntaje)
+                    } else {
+                        alert('No se ha podido calificar el curso .. Intentelo mas tarde')
+                    }
+                }
+            });
+        } else {
+            alert('No puede calificar el curso')
+        }
+    }
 
 }
