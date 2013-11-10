@@ -105,8 +105,8 @@ h1 {
     min-height: 6em;
 }
 figure > img {
-    width: 100%;
-    min-height: 100%;
+    width: 50%;
+    min-height: 50%;
 }
 .ui-field-contain.ui-body.ui-br {
     text-align: center;

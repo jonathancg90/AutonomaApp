@@ -10,7 +10,6 @@ function init(){
     if(token != null) {
         evtProfile();
         evtSaberCursoDelDia();
-        evtCriterios();
     } else {
         alert('Ha ocurrido un error:deslogearse y vuelva a entrar')
     }
@@ -26,7 +25,7 @@ function init(){
     var contentLogin = $('.content-logIn'),
         contentProfile = $('.content-Profile'),
         contentactualizar = $('.content-Cursos'),
-        contentSaber = $('.info');
+        contentSaber = $('#info-curso');
 
     //Eventos
 //    $('#a').on('click', function(e){
@@ -141,24 +140,6 @@ function init(){
             } 
         });
     }
-    function evtCriterios(){
-        var url =  domain +'criterios';
-        var html ='<form action="" id="form_calificar">';
-        var contentCalificar = $('#form_calificar');
-        $.ajax({
-            dataType: "json",
-            type: "GET",
-            url: url,
-            success: function(data){
-                for(var i in data){
-                    html += '<label for="slider-'+data[i].id+'">'+data[i].nombre+'</label><input data-criterio="'+data[i].id+'" type="range" name="slider-1" id="slider-'+data[i].id+'" class="slide" value="50" min="0" max="100" data-highlight="true">'
-                }
-                html+='<input type="submit" value="Actualizar"></form>';
-                contentCalificar.append(html);
-                contentCalificar.trigger('create');
-            }
-        });
-    }
     function evtCarreras( carrera){
         var url =  domain +'carrera';
         var html ='<label for="carrera">Carrera:</label><select name="carrera" id="carrera">';
@@ -213,6 +194,7 @@ function init(){
         }
     }
     function evtSaberCursoDelDia(){
+        var result = '';
          var data = {
                  'token':token
          };
@@ -223,19 +205,53 @@ function init(){
              url: url,
              data:data,
              success: function(data){
-                 var id_curso = data.id,
-                     profesor = data.profesor,
-                     curso = data.curso;
-                 contentSaber.children('ul').html('');
-                 contentSaber.children('ul').append('<li>Profesor: ID:'+profesor+' | Curso: '+curso+'</li>');
-                 $('#idCurso').val(id_curso);
+                 if(data.state == 'OK'){
+                     if(curso = data.curso != undefined){
+                         var id_curso = data.id,
+                         profesor = data.profesor,
+                         curso = data.curso;
+                         result = 'Profesor: ID:'+profesor+' | Curso: '+curso;
+                         contentSaber.children('ul').html('');
+                         contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
+                         $('#idCurso').val(id_curso);
+                     } else {
+                         result = 'No tiene cursos el dia de hoy';
+                         contentSaber.children('ul').html('');
+                         contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
+                     }
+                 debugger;
+                 evtCriterios();
+                 } else {
+                    result = 'Ah ocurrido un problema';
+                    contentSaber.children('ul').html('');
+                    contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
+                 }
              }
          });
+    }
+    function evtCriterios(){
+        var titulo = $('#titulo-curso').html();
+        var url =  domain +'criterios';
+        var html ='<h2>'+titulo+'</h2><br>';
+        var contentCalificar = $('#form_calificar');
+        $.ajax({
+            dataType: "json",
+            type: "GET",
+            url: url,
+            success: function(data){
+                for(var i in data){
+                   html += '<label for="slider-'+data[i].id+'">'+data[i].nombre+'</label><input type="number" data-type="range" data-criterio="'+data[i].id+'" name="slider-'+data[i].id+'" id="slider-0" value="50" min="0" max="100">'
+                }
+                html+='<input type="submit" value="Actualizar">';
+                contentCalificar.append(html);
+                contentCalificar.trigger('create');
+            }
+        });
     }
     function evtCalificar(){
         var curso = $('#idCurso').val();
 
-        var inputs = $('#form_calificar input[type=range]'),
+        var inputs = $('#form_calificar input[type=number]'),
             calificaciones = [];
         $.each(inputs, function(key, value){
             calificaciones.push({
