@@ -8,15 +8,15 @@ function init(){
 
     //var domain = 'http://redau.herokuapp.com/';
     var domain = 'http://127.0.0.1:5000/';
+    var nodeServer = 'http://127.0.0.1:5050/';
+    //var nodeServer = 'http://auserver.herokuapp.com/';
     var token = window.localStorage.getItem("token");
-    var idCurso = '';
 
     //Login Automatico
     //------------------
 
     if(token != null) {
         evtProfile();
-        evtSaberCursoDelDia();
     } else {
         alert('Ha ocurrido un error:deslogearse y vuelva a entrar')
     }
@@ -31,8 +31,7 @@ function init(){
         calificar = $('#form_calificar');
 
     //Elementos contenedores
-    var contentLogin = $('.content-logIn'),
-        contentProfile = $('.content-Profile'),
+    var contentProfile = $('.content-Profile'),
         contentactualizar = $('.content-Cursos'),
         contentSaber = $('#info-curso');
 
@@ -49,6 +48,13 @@ function init(){
         evtCalificar();
     });
 
+    $('#logout').on('click', function(e){
+        e.preventDefault();
+        window.localStorage.removeItem('token');
+        window.localStorage.removeItem('idCurso');
+        window.location.replace("index.html");
+    })
+
     //Funciones
     //-------
     function evtProfile(){
@@ -62,7 +68,6 @@ function init(){
             data:data,
             url: url,
             success: function(data){
-
                 $('#act-name').val(data.nombre);
                 //Agregar por defecto la carrera
                 evtCarreras(data.carrera);
@@ -71,7 +76,28 @@ function init(){
                 //Agregar Turno por defecto ciclo
                 evtTurnos(data.turno);
                 //Agregar seccion por defecto
-                evtSeccion(data.seccion)
+                evtSeccion(data.seccion);
+                //Saber el curso del dia
+                evtSaberCursoDelDia();
+            }
+        });
+    }
+    function evtMuro(){
+        $('#list-messages').html('');
+        var data = {
+            curso: window.localStorage.getItem("idCurso")
+        };
+        var url =  nodeServer +'comentario';
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            data:data,
+            url: url,
+            success: function(messages){
+                debugger;
+                $.each(messages.mensajes, function(i, value){
+                    $('#list-messages').append($("<li>@"+ value.name +": "+ value.comentario +"</li>"));
+                })
             }
         });
     }
@@ -209,10 +235,11 @@ function init(){
                      if(curso = data.curso != undefined){
                          var profesor = data.profesor,
                          curso = data.curso;
-                         idCurso = data.id;
+                         window.localStorage.setItem("idCurso", data.id);
                          result = 'Profesor:'+profesor+' | Curso: '+curso;
                          contentSaber.children('ul').html('');
                          contentSaber.children('ul').append('<li id="titulo-curso">'+result+'</li>');
+                         evtMuro();
                      } else {
                          result = 'No tiene cursos el dia de hoy';
                          contentSaber.children('ul').html('');
@@ -247,7 +274,7 @@ function init(){
         });
     }
     function evtCalificar(){
-        if(idCurso != ''){
+        if(window.localStorage.getItem("idCurso") != undefined){
             var inputs = $('#form_calificar input[type=number]'),
             calificaciones = [];
             $.each(inputs, function(key, value){
@@ -258,7 +285,7 @@ function init(){
             });
             var data = {
                     'token':token,
-                    'curso':idCurso,
+                    'curso':window.localStorage.getItem("idCurso"),
                     'califica':JSON.stringify(calificaciones)
                 };
             var url =  domain +'califica';

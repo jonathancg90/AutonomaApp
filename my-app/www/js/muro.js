@@ -18,8 +18,10 @@ $(function(){
         //Ingreso por nickname
 		$("#send-message").on('click', function(e){
             e.preventDefault();
-            var message = $('#messageInput').val();
-            socket.emit('message', 'jonathan', message);
+            var idCurso = window.localStorage.getItem("idCurso"),
+            	message = $('#messageInput').val(),
+            	name = $('#act-name').val();
+            socket.emit('message', idCurso, name, message);
 
 		});
         //Actualiza mensajes que escriben
