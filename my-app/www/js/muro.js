@@ -6,7 +6,7 @@ $(function(){
 		$wait = $('#wait');
 
 	$chat.hide();
-	//var socket = io.connect('http://mighty-castle-2609.herokuapp.com/');
+	//var socket = io.connect('http://auserver.herokuapp.com/');
     var socket = io.connect('http://127.0.0.1:5050/');
 
 	socket.on('connect', function(){
@@ -14,20 +14,24 @@ $(function(){
 		init();
 	});
 
-	var init = function(){
+	var init = function() {
         //Ingreso por nickname
 		$("#send-message").on('click', function(e){
             e.preventDefault();
-            var message = $(this).val();
+            var message = $('#messageInput').val();
             socket.emit('message', 'jonathan', message);
 
 		});
         //Actualiza mensajes que escriben
-		socket.on('message', function(nickname, message){
-			addMessage(nickname, message);
+		socket.on('message', function(nickname, messages){
+			addMessage(nickname, messages);
 		});
-        var addMessage =  function(nickname, message){
-            $('#list-messages').append($("<li>@"+ nickname +": "+ message +"</li>"));
+        var addMessage =  function(nickname, messages){
+        	debugger;
+        	$('#list-messages').html('');
+        	$.each(messages, function(i, value){
+        		$('#list-messages').append($("<li>@"+ value.name +": "+ value.comentario +"</li>"));
+        	})
         }
 	}
 
