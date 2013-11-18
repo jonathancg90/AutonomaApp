@@ -6,10 +6,10 @@ function init(){
     //Variables globales
     //------------------
 
-    //var domain = 'http://redau.herokuapp.com/';
-    var domain = 'http://127.0.0.1:5000/';
-    var nodeServer = 'http://127.0.0.1:5050/';
-    //var nodeServer = 'http://auserver.herokuapp.com/';
+    var domain = 'http://redau.herokuapp.com/';
+    var nodeServer = 'http://auserver.herokuapp.com/';
+    //var domain = 'http://127.0.0.1:5000/';
+    //var nodeServer = 'http://127.0.0.1:5050/';
     var token = window.localStorage.getItem("token");
 
     //Login Automatico
